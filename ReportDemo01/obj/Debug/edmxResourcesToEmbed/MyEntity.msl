@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShangrilaReportsModelStoreContainer" CdmEntityContainer="ShangrilaReportsEntities">
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
+          <ScalarProperty Name="Accepters" ColumnName="Accepters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Homes">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.Home">
+        <MappingFragment StoreEntitySet="Home">
+          <ScalarProperty Name="HomeID" ColumnName="HomeID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Storied" ColumnName="Storied" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="NakshapasDate" ColumnName="NakshapasDate" />
+          <ScalarProperty Name="NirmanSampannaDate" ColumnName="NirmanSampannaDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lands">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.Land">
+        <MappingFragment StoreEntitySet="Land">
+          <ScalarProperty Name="LandId" ColumnName="LandId" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="MunicipalityOrVdc" ColumnName="MunicipalityOrVdc" />
+          <ScalarProperty Name="WardNumber" ColumnName="WardNumber" />
+          <ScalarProperty Name="SheetNumber" ColumnName="SheetNumber" />
+          <ScalarProperty Name="KittaNumber" ColumnName="KittaNumber" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Properties">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.Property">
+        <MappingFragment StoreEntitySet="Property">
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="GrandFatherName" ColumnName="GrandFatherName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RelationWithLoanSeeker" ColumnName="RelationWithLoanSeeker" />
+          <ScalarProperty Name="IsOrganized" ColumnName="IsOrganized" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+          <ScalarProperty Name="AuthorizedPerson" ColumnName="AuthorizedPerson" />
+          <ScalarProperty Name="RegisteredAt" ColumnName="RegisteredAt" />
+          <ScalarProperty Name="PAN" ColumnName="PAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

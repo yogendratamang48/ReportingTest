@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShangrilaReportsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Accepters" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Home">
+    <Key>
+      <PropertyRef Name="HomeID" />
+    </Key>
+    <Property Name="HomeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Storied" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NakshapasDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NirmanSampannaDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Land">
+    <Key>
+      <PropertyRef Name="LandId" />
+    </Key>
+    <Property Name="LandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MunicipalityOrVdc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="WardNumber" Type="Int32" />
+    <Property Name="SheetNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KittaNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="PropertyID" />
+    </Key>
+    <Property Name="PropertyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Owner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FatherName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GrandFatherName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RelationWithLoanSeeker" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsOrganized" Type="Boolean" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegisteredDate" Type="DateTime" Precision="0" />
+    <Property Name="AuthorizedPerson" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RegisteredAt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PAN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ShangrilaReportsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Applications" EntityType="Self.Application" />
+    <EntitySet Name="Homes" EntityType="Self.Home" />
+    <EntitySet Name="Lands" EntityType="Self.Land" />
+    <EntitySet Name="Properties" EntityType="Self.Property" />
+  </EntityContainer>
+</Schema>

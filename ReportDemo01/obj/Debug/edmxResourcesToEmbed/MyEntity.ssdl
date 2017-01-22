@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShangrilaReportsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Accepters" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Home">
+    <Key>
+      <PropertyRef Name="HomeID" />
+    </Key>
+    <Property Name="HomeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Storied" Type="nvarchar" MaxLength="50" />
+    <Property Name="Area" Type="nvarchar" MaxLength="50" />
+    <Property Name="NakshapasDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="NirmanSampannaDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Land">
+    <Key>
+      <PropertyRef Name="LandId" />
+    </Key>
+    <Property Name="LandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="District" Type="nvarchar" MaxLength="50" />
+    <Property Name="MunicipalityOrVdc" Type="nvarchar" MaxLength="200" />
+    <Property Name="WardNumber" Type="int" />
+    <Property Name="SheetNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="KittaNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Area" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="PropertyID" />
+    </Key>
+    <Property Name="PropertyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Owner" Type="nvarchar" MaxLength="200" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="200" />
+    <Property Name="GrandFatherName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="RelationWithLoanSeeker" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsOrganized" Type="bit" />
+    <Property Name="RegistrationNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisteredDate" Type="date" />
+    <Property Name="AuthorizedPerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="RegisteredAt" Type="nvarchar" MaxLength="200" />
+    <Property Name="PAN" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="ShangrilaReportsModelStoreContainer">
+    <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Property" EntityType="Self.Property" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

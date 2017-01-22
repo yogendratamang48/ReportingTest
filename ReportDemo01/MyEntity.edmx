@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ShangrilaReportsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Accepters" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Home">
+          <Key>
+            <PropertyRef Name="HomeID" />
+          </Key>
+          <Property Name="HomeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Storied" Type="nvarchar" MaxLength="50" />
+          <Property Name="Area" Type="nvarchar" MaxLength="50" />
+          <Property Name="NakshapasDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="NirmanSampannaDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Land">
+          <Key>
+            <PropertyRef Name="LandId" />
+          </Key>
+          <Property Name="LandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="District" Type="nvarchar" MaxLength="50" />
+          <Property Name="MunicipalityOrVdc" Type="nvarchar" MaxLength="200" />
+          <Property Name="WardNumber" Type="int" />
+          <Property Name="SheetNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="KittaNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Area" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Note" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Property">
+          <Key>
+            <PropertyRef Name="PropertyID" />
+          </Key>
+          <Property Name="PropertyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Owner" Type="nvarchar" MaxLength="200" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GrandFatherName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="RelationWithLoanSeeker" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsOrganized" Type="bit" />
+          <Property Name="RegistrationNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegisteredDate" Type="date" />
+          <Property Name="AuthorizedPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="RegisteredAt" Type="nvarchar" MaxLength="200" />
+          <Property Name="PAN" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="ShangrilaReportsModelStoreContainer">
+          <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property" EntityType="Self.Property" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ShangrilaReportsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Accepters" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Home">
+          <Key>
+            <PropertyRef Name="HomeID" />
+          </Key>
+          <Property Name="HomeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Storied" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NakshapasDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NirmanSampannaDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Land">
+          <Key>
+            <PropertyRef Name="LandId" />
+          </Key>
+          <Property Name="LandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MunicipalityOrVdc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="WardNumber" Type="Int32" />
+          <Property Name="SheetNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KittaNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Property">
+          <Key>
+            <PropertyRef Name="PropertyID" />
+          </Key>
+          <Property Name="PropertyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Owner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FatherName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="GrandFatherName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RelationWithLoanSeeker" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsOrganized" Type="Boolean" />
+          <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RegisteredDate" Type="DateTime" Precision="0" />
+          <Property Name="AuthorizedPerson" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RegisteredAt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PAN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ShangrilaReportsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Applications" EntityType="Self.Application" />
+          <EntitySet Name="Homes" EntityType="Self.Home" />
+          <EntitySet Name="Lands" EntityType="Self.Land" />
+          <EntitySet Name="Properties" EntityType="Self.Property" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ShangrilaReportsModelStoreContainer" CdmEntityContainer="ShangrilaReportsEntities">
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.Application">
+              <MappingFragment StoreEntitySet="Application">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
+                <ScalarProperty Name="Accepters" ColumnName="Accepters" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Homes">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.Home">
+              <MappingFragment StoreEntitySet="Home">
+                <ScalarProperty Name="HomeID" ColumnName="HomeID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Storied" ColumnName="Storied" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="NakshapasDate" ColumnName="NakshapasDate" />
+                <ScalarProperty Name="NirmanSampannaDate" ColumnName="NirmanSampannaDate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lands">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.Land">
+              <MappingFragment StoreEntitySet="Land">
+                <ScalarProperty Name="LandId" ColumnName="LandId" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="MunicipalityOrVdc" ColumnName="MunicipalityOrVdc" />
+                <ScalarProperty Name="WardNumber" ColumnName="WardNumber" />
+                <ScalarProperty Name="SheetNumber" ColumnName="SheetNumber" />
+                <ScalarProperty Name="KittaNumber" ColumnName="KittaNumber" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Properties">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.Property">
+              <MappingFragment StoreEntitySet="Property">
+                <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="GrandFatherName" ColumnName="GrandFatherName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="RelationWithLoanSeeker" ColumnName="RelationWithLoanSeeker" />
+                <ScalarProperty Name="IsOrganized" ColumnName="IsOrganized" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+                <ScalarProperty Name="AuthorizedPerson" ColumnName="AuthorizedPerson" />
+                <ScalarProperty Name="RegisteredAt" ColumnName="RegisteredAt" />
+                <ScalarProperty Name="PAN" ColumnName="PAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
