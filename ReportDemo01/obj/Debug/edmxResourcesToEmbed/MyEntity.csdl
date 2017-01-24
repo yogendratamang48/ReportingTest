@@ -57,5 +57,33 @@
     <EntitySet Name="Homes" EntityType="Self.Home" />
     <EntitySet Name="Lands" EntityType="Self.Land" />
     <EntitySet Name="Properties" EntityType="Self.Property" />
+    <EntitySet Name="LoanBasedOnFunds" EntityType="ShangrilaReportsModel.LoanBasedOnFund" />
+    <EntitySet Name="LoanBasedOnNonFunds" EntityType="ShangrilaReportsModel.LoanBasedOnNonFund" />
   </EntityContainer>
+  <EntityType Name="LoanBasedOnFund">
+    <Key>
+      <PropertyRef Name="LoanBasedonFundID" />
+    </Key>
+    <Property Name="LoanBasedonFundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResidentialLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RealStateLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PersonalLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ShareDepositLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ESFULoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PoorAgriLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VehicleloanWheels" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="VehicleLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RentVehicleType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RentVehicleLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherOneLoan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherTwoLoan" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="LoanBasedOnNonFund">
+    <Key>
+      <PropertyRef Name="NonFundID" />
+    </Key>
+    <Property Name="NonFundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NonFundItem" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
 </Schema>

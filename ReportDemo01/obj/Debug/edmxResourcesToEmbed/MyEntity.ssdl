@@ -35,6 +35,32 @@
     <Property Name="Type" Type="nvarchar" MaxLength="50" />
     <Property Name="Note" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="LoanBasedOnFund">
+    <Key>
+      <PropertyRef Name="LoanBasedonFundID" />
+    </Key>
+    <Property Name="LoanBasedonFundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResidentialLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RealStateLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PersonalLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ShareDepositLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ESFULoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PoorAgriLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VehicleloanWheels" Type="nchar" MaxLength="10" />
+    <Property Name="VehicleLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RentVehicleType" Type="nvarchar" MaxLength="50" />
+    <Property Name="RentVehicleLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OtherOneLoan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OtherTwoLoan" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="LoanBasedOnNonFund">
+    <Key>
+      <PropertyRef Name="NonFundID" />
+    </Key>
+    <Property Name="NonFundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NonFundItem" Type="nvarchar" MaxLength="200" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
   <EntityType Name="Property">
     <Key>
       <PropertyRef Name="PropertyID" />
@@ -56,6 +82,8 @@
     <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanBasedOnFund" EntityType="Self.LoanBasedOnFund" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanBasedOnNonFund" EntityType="Self.LoanBasedOnNonFund" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Property" EntityType="Self.Property" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

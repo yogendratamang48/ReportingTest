@@ -57,5 +57,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="LoanBasedOnFunds">
+      <EntityTypeMapping TypeName="IsTypeOf(ShangrilaReportsModel.LoanBasedOnFund)">
+        <MappingFragment StoreEntitySet="LoanBasedOnFund">
+          <ScalarProperty Name="LoanBasedonFundID" ColumnName="LoanBasedonFundID" />
+          <ScalarProperty Name="OtherTwoLoan" ColumnName="OtherTwoLoan" />
+          <ScalarProperty Name="OtherOneLoan" ColumnName="OtherOneLoan" />
+          <ScalarProperty Name="RentVehicleLoan" ColumnName="RentVehicleLoan" />
+          <ScalarProperty Name="RentVehicleType" ColumnName="RentVehicleType" />
+          <ScalarProperty Name="VehicleLoan" ColumnName="VehicleLoan" />
+          <ScalarProperty Name="VehicleloanWheels" ColumnName="VehicleloanWheels" />
+          <ScalarProperty Name="PoorAgriLoan" ColumnName="PoorAgriLoan" />
+          <ScalarProperty Name="ESFULoan" ColumnName="ESFULoan" />
+          <ScalarProperty Name="ShareDepositLoan" ColumnName="ShareDepositLoan" />
+          <ScalarProperty Name="PersonalLoan" ColumnName="PersonalLoan" />
+          <ScalarProperty Name="RealStateLoan" ColumnName="RealStateLoan" />
+          <ScalarProperty Name="ResidentialLoan" ColumnName="ResidentialLoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanBasedOnNonFunds">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.LoanBasedOnNonFund">
+        <MappingFragment StoreEntitySet="LoanBasedOnNonFund">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="NonFundItem" ColumnName="NonFundItem" />
+          <ScalarProperty Name="NonFundID" ColumnName="NonFundID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

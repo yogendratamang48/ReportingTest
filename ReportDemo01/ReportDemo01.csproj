@@ -128,10 +128,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ShangrilaReports.mdf" />
-    <Content Include="App_Data\ShangrilaReports_log.ldf">
-      <DependentUpon>ShangrilaReports.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -165,6 +161,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -172,6 +169,12 @@
       <DependentUpon>MyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Land.cs">
+      <DependentUpon>MyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoanBasedOnFund.cs">
+      <DependentUpon>MyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoanBasedOnNonFund.cs">
       <DependentUpon>MyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="MyEntity.Context.cs">
@@ -193,6 +196,7 @@
     <Compile Include="Property.cs">
       <DependentUpon>MyEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReportsHelper.cs" />
     <Compile Include="RPTDatasets\Dhito.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -244,7 +248,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Shared\TestView.cshtml" />
+    <Content Include="Views\Reports\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -253,13 +257,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reports\RPDhito.rdlc" />
+    <EmbeddedResource Include="Reports\RPDhito.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

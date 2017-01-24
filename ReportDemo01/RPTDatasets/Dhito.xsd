@@ -14,7 +14,7 @@
   <xs:element name="Dhito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Dhito" msprop:Generator_UserDSName="Dhito">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Application" msprop:Generator_TableClassName="ApplicationDataTable" msprop:Generator_TableVarName="tableApplication" msprop:Generator_TablePropName="Application" msprop:Generator_RowDeletingName="ApplicationRowDeleting" msprop:Generator_RowChangingName="ApplicationRowChanging" msprop:Generator_RowEvHandlerName="ApplicationRowChangeEventHandler" msprop:Generator_RowDeletedName="ApplicationRowDeleted" msprop:Generator_UserTableName="Application" msprop:Generator_RowChangedName="ApplicationRowChanged" msprop:Generator_RowEvArgName="ApplicationRowChangeEvent" msprop:Generator_RowClassName="ApplicationRow">
+        <xs:element name="Application" msprop:Generator_TableClassName="ApplicationDataTable" msprop:Generator_TableVarName="tableApplication" msprop:Generator_RowChangedName="ApplicationRowChanged" msprop:Generator_TablePropName="Application" msprop:Generator_RowDeletingName="ApplicationRowDeleting" msprop:Generator_RowChangingName="ApplicationRowChanging" msprop:Generator_RowEvHandlerName="ApplicationRowChangeEventHandler" msprop:Generator_RowDeletedName="ApplicationRowDeleted" msprop:Generator_RowClassName="ApplicationRow" msprop:Generator_UserTableName="Application" msprop:Generator_RowEvArgName="ApplicationRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ApplicationId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApplicationId" msprop:Generator_ColumnPropNameInRow="ApplicationId" msprop:Generator_ColumnPropNameInTable="ApplicationIdColumn" msprop:Generator_UserColumnName="ApplicationId" type="xs:int" />
@@ -35,7 +35,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Home" msprop:Generator_TableClassName="HomeDataTable" msprop:Generator_TableVarName="tableHome" msprop:Generator_TablePropName="Home" msprop:Generator_RowDeletingName="HomeRowDeleting" msprop:Generator_RowChangingName="HomeRowChanging" msprop:Generator_RowEvHandlerName="HomeRowChangeEventHandler" msprop:Generator_RowDeletedName="HomeRowDeleted" msprop:Generator_UserTableName="Home" msprop:Generator_RowChangedName="HomeRowChanged" msprop:Generator_RowEvArgName="HomeRowChangeEvent" msprop:Generator_RowClassName="HomeRow">
+        <xs:element name="Home" msprop:Generator_TableClassName="HomeDataTable" msprop:Generator_TableVarName="tableHome" msprop:Generator_RowChangedName="HomeRowChanged" msprop:Generator_TablePropName="Home" msprop:Generator_RowDeletingName="HomeRowDeleting" msprop:Generator_RowChangingName="HomeRowChanging" msprop:Generator_RowEvHandlerName="HomeRowChangeEventHandler" msprop:Generator_RowDeletedName="HomeRowDeleted" msprop:Generator_RowClassName="HomeRow" msprop:Generator_UserTableName="Home" msprop:Generator_RowEvArgName="HomeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HomeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnHomeID" msprop:Generator_ColumnPropNameInRow="HomeID" msprop:Generator_ColumnPropNameInTable="HomeIDColumn" msprop:Generator_UserColumnName="HomeID" type="xs:int" />
@@ -91,7 +91,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Land" msprop:Generator_TableClassName="LandDataTable" msprop:Generator_TableVarName="tableLand" msprop:Generator_TablePropName="Land" msprop:Generator_RowDeletingName="LandRowDeleting" msprop:Generator_RowChangingName="LandRowChanging" msprop:Generator_RowEvHandlerName="LandRowChangeEventHandler" msprop:Generator_RowDeletedName="LandRowDeleted" msprop:Generator_UserTableName="Land" msprop:Generator_RowChangedName="LandRowChanged" msprop:Generator_RowEvArgName="LandRowChangeEvent" msprop:Generator_RowClassName="LandRow">
+        <xs:element name="Land" msprop:Generator_TableClassName="LandDataTable" msprop:Generator_TableVarName="tableLand" msprop:Generator_RowChangedName="LandRowChanged" msprop:Generator_TablePropName="Land" msprop:Generator_RowDeletingName="LandRowDeleting" msprop:Generator_RowChangingName="LandRowChanging" msprop:Generator_RowEvHandlerName="LandRowChangeEventHandler" msprop:Generator_RowDeletedName="LandRowDeleted" msprop:Generator_RowClassName="LandRow" msprop:Generator_UserTableName="Land" msprop:Generator_RowEvArgName="LandRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LandId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLandId" msprop:Generator_ColumnPropNameInRow="LandId" msprop:Generator_ColumnPropNameInTable="LandIdColumn" msprop:Generator_UserColumnName="LandId" type="xs:int" />
@@ -148,7 +148,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Property" msprop:Generator_TableClassName="PropertyDataTable" msprop:Generator_TableVarName="tableProperty" msprop:Generator_TablePropName="Property" msprop:Generator_RowDeletingName="PropertyRowDeleting" msprop:Generator_RowChangingName="PropertyRowChanging" msprop:Generator_RowEvHandlerName="PropertyRowChangeEventHandler" msprop:Generator_RowDeletedName="PropertyRowDeleted" msprop:Generator_UserTableName="Property" msprop:Generator_RowChangedName="PropertyRowChanged" msprop:Generator_RowEvArgName="PropertyRowChangeEvent" msprop:Generator_RowClassName="PropertyRow">
+        <xs:element name="Property" msprop:Generator_TableClassName="PropertyDataTable" msprop:Generator_TableVarName="tableProperty" msprop:Generator_RowChangedName="PropertyRowChanged" msprop:Generator_TablePropName="Property" msprop:Generator_RowDeletingName="PropertyRowDeleting" msprop:Generator_RowChangingName="PropertyRowChanging" msprop:Generator_RowEvHandlerName="PropertyRowChangeEventHandler" msprop:Generator_RowDeletedName="PropertyRowDeleted" msprop:Generator_RowClassName="PropertyRow" msprop:Generator_UserTableName="Property" msprop:Generator_RowEvArgName="PropertyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PropertyID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPropertyID" msprop:Generator_ColumnPropNameInRow="PropertyID" msprop:Generator_ColumnPropNameInTable="PropertyIDColumn" msprop:Generator_UserColumnName="PropertyID" type="xs:int" />
@@ -220,6 +220,52 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="LoanBasedOnFund" msprop:Generator_TableClassName="LoanBasedOnFundDataTable" msprop:Generator_TableVarName="tableLoanBasedOnFund" msprop:Generator_TablePropName="LoanBasedOnFund" msprop:Generator_RowDeletingName="LoanBasedOnFundRowDeleting" msprop:Generator_RowChangingName="LoanBasedOnFundRowChanging" msprop:Generator_RowEvHandlerName="LoanBasedOnFundRowChangeEventHandler" msprop:Generator_RowDeletedName="LoanBasedOnFundRowDeleted" msprop:Generator_UserTableName="LoanBasedOnFund" msprop:Generator_RowChangedName="LoanBasedOnFundRowChanged" msprop:Generator_RowEvArgName="LoanBasedOnFundRowChangeEvent" msprop:Generator_RowClassName="LoanBasedOnFundRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LoanBasedonFundID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLoanBasedonFundID" msprop:Generator_ColumnPropNameInRow="LoanBasedonFundID" msprop:Generator_ColumnPropNameInTable="LoanBasedonFundIDColumn" msprop:Generator_UserColumnName="LoanBasedonFundID" type="xs:int" />
+              <xs:element name="ResidentialLoan" msprop:Generator_ColumnVarNameInTable="columnResidentialLoan" msprop:Generator_ColumnPropNameInRow="ResidentialLoan" msprop:Generator_ColumnPropNameInTable="ResidentialLoanColumn" msprop:Generator_UserColumnName="ResidentialLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RealStateLoan" msprop:Generator_ColumnVarNameInTable="columnRealStateLoan" msprop:Generator_ColumnPropNameInRow="RealStateLoan" msprop:Generator_ColumnPropNameInTable="RealStateLoanColumn" msprop:Generator_UserColumnName="RealStateLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PersonalLoan" msprop:Generator_ColumnVarNameInTable="columnPersonalLoan" msprop:Generator_ColumnPropNameInRow="PersonalLoan" msprop:Generator_ColumnPropNameInTable="PersonalLoanColumn" msprop:Generator_UserColumnName="PersonalLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ShareDepositLoan" msprop:Generator_ColumnVarNameInTable="columnShareDepositLoan" msprop:Generator_ColumnPropNameInRow="ShareDepositLoan" msprop:Generator_ColumnPropNameInTable="ShareDepositLoanColumn" msprop:Generator_UserColumnName="ShareDepositLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESFULoan" msprop:Generator_ColumnVarNameInTable="columnESFULoan" msprop:Generator_ColumnPropNameInRow="ESFULoan" msprop:Generator_ColumnPropNameInTable="ESFULoanColumn" msprop:Generator_UserColumnName="ESFULoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PoorAgriLoan" msprop:Generator_ColumnVarNameInTable="columnPoorAgriLoan" msprop:Generator_ColumnPropNameInRow="PoorAgriLoan" msprop:Generator_ColumnPropNameInTable="PoorAgriLoanColumn" msprop:Generator_UserColumnName="PoorAgriLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VehicleloanWheels" msprop:Generator_ColumnVarNameInTable="columnVehicleloanWheels" msprop:Generator_ColumnPropNameInRow="VehicleloanWheels" msprop:Generator_ColumnPropNameInTable="VehicleloanWheelsColumn" msprop:Generator_UserColumnName="VehicleloanWheels" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VehicleLoan" msprop:Generator_ColumnVarNameInTable="columnVehicleLoan" msprop:Generator_ColumnPropNameInRow="VehicleLoan" msprop:Generator_ColumnPropNameInTable="VehicleLoanColumn" msprop:Generator_UserColumnName="VehicleLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RentVehicleType" msprop:Generator_ColumnVarNameInTable="columnRentVehicleType" msprop:Generator_ColumnPropNameInRow="RentVehicleType" msprop:Generator_ColumnPropNameInTable="RentVehicleTypeColumn" msprop:Generator_UserColumnName="RentVehicleType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RentVehicleLoan" msprop:Generator_ColumnVarNameInTable="columnRentVehicleLoan" msprop:Generator_ColumnPropNameInRow="RentVehicleLoan" msprop:Generator_ColumnPropNameInTable="RentVehicleLoanColumn" msprop:Generator_UserColumnName="RentVehicleLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherOneLoan" msprop:Generator_ColumnVarNameInTable="columnOtherOneLoan" msprop:Generator_ColumnPropNameInRow="OtherOneLoan" msprop:Generator_ColumnPropNameInTable="OtherOneLoanColumn" msprop:Generator_UserColumnName="OtherOneLoan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherTwoLoan" msprop:Generator_ColumnVarNameInTable="columnOtherTwoLoan" msprop:Generator_ColumnPropNameInRow="OtherTwoLoan" msprop:Generator_ColumnPropNameInTable="OtherTwoLoanColumn" msprop:Generator_UserColumnName="OtherTwoLoan" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoanBasedOnNonFund" msprop:Generator_TableClassName="LoanBasedOnNonFundDataTable" msprop:Generator_TableVarName="tableLoanBasedOnNonFund" msprop:Generator_TablePropName="LoanBasedOnNonFund" msprop:Generator_RowDeletingName="LoanBasedOnNonFundRowDeleting" msprop:Generator_RowChangingName="LoanBasedOnNonFundRowChanging" msprop:Generator_RowEvHandlerName="LoanBasedOnNonFundRowChangeEventHandler" msprop:Generator_RowDeletedName="LoanBasedOnNonFundRowDeleted" msprop:Generator_UserTableName="LoanBasedOnNonFund" msprop:Generator_RowChangedName="LoanBasedOnNonFundRowChanged" msprop:Generator_RowEvArgName="LoanBasedOnNonFundRowChangeEvent" msprop:Generator_RowClassName="LoanBasedOnNonFundRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NonFundID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNonFundID" msprop:Generator_ColumnPropNameInRow="NonFundID" msprop:Generator_ColumnPropNameInTable="NonFundIDColumn" msprop:Generator_UserColumnName="NonFundID" type="xs:int" />
+              <xs:element name="NonFundItem" msprop:Generator_ColumnVarNameInTable="columnNonFundItem" msprop:Generator_ColumnPropNameInRow="NonFundItem" msprop:Generator_ColumnPropNameInTable="NonFundItemColumn" msprop:Generator_UserColumnName="NonFundItem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -237,6 +283,14 @@
     <xs:unique name="Property_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Property" />
       <xs:field xpath="mstns:PropertyID" />
+    </xs:unique>
+    <xs:unique name="LoanBasedOnFund_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LoanBasedOnFund" />
+      <xs:field xpath="mstns:LoanBasedonFundID" />
+    </xs:unique>
+    <xs:unique name="LoanBasedOnNonFund_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LoanBasedOnNonFund" />
+      <xs:field xpath="mstns:NonFundID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

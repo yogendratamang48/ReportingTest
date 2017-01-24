@@ -32,6 +32,10 @@ namespace ReportDemo01.RPTDatasets {
         
         private PropertyDataTable tableProperty;
         
+        private LoanBasedOnFundDataTable tableLoanBasedOnFund;
+        
+        private LoanBasedOnNonFundDataTable tableLoanBasedOnNonFund;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -71,6 +75,12 @@ namespace ReportDemo01.RPTDatasets {
                 }
                 if ((ds.Tables["Property"] != null)) {
                     base.Tables.Add(new PropertyDataTable(ds.Tables["Property"]));
+                }
+                if ((ds.Tables["LoanBasedOnFund"] != null)) {
+                    base.Tables.Add(new LoanBasedOnFundDataTable(ds.Tables["LoanBasedOnFund"]));
+                }
+                if ((ds.Tables["LoanBasedOnNonFund"] != null)) {
+                    base.Tables.Add(new LoanBasedOnNonFundDataTable(ds.Tables["LoanBasedOnNonFund"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -127,6 +137,26 @@ namespace ReportDemo01.RPTDatasets {
         public PropertyDataTable Property {
             get {
                 return this.tableProperty;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LoanBasedOnFundDataTable LoanBasedOnFund {
+            get {
+                return this.tableLoanBasedOnFund;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LoanBasedOnNonFundDataTable LoanBasedOnNonFund {
+            get {
+                return this.tableLoanBasedOnNonFund;
             }
         }
         
@@ -209,6 +239,12 @@ namespace ReportDemo01.RPTDatasets {
                 if ((ds.Tables["Property"] != null)) {
                     base.Tables.Add(new PropertyDataTable(ds.Tables["Property"]));
                 }
+                if ((ds.Tables["LoanBasedOnFund"] != null)) {
+                    base.Tables.Add(new LoanBasedOnFundDataTable(ds.Tables["LoanBasedOnFund"]));
+                }
+                if ((ds.Tables["LoanBasedOnNonFund"] != null)) {
+                    base.Tables.Add(new LoanBasedOnNonFundDataTable(ds.Tables["LoanBasedOnNonFund"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -266,6 +302,18 @@ namespace ReportDemo01.RPTDatasets {
                     this.tableProperty.InitVars();
                 }
             }
+            this.tableLoanBasedOnFund = ((LoanBasedOnFundDataTable)(base.Tables["LoanBasedOnFund"]));
+            if ((initTable == true)) {
+                if ((this.tableLoanBasedOnFund != null)) {
+                    this.tableLoanBasedOnFund.InitVars();
+                }
+            }
+            this.tableLoanBasedOnNonFund = ((LoanBasedOnNonFundDataTable)(base.Tables["LoanBasedOnNonFund"]));
+            if ((initTable == true)) {
+                if ((this.tableLoanBasedOnNonFund != null)) {
+                    this.tableLoanBasedOnNonFund.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -284,6 +332,10 @@ namespace ReportDemo01.RPTDatasets {
             base.Tables.Add(this.tableLand);
             this.tableProperty = new PropertyDataTable();
             base.Tables.Add(this.tableProperty);
+            this.tableLoanBasedOnFund = new LoanBasedOnFundDataTable();
+            base.Tables.Add(this.tableLoanBasedOnFund);
+            this.tableLoanBasedOnNonFund = new LoanBasedOnNonFundDataTable();
+            base.Tables.Add(this.tableLoanBasedOnNonFund);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -307,6 +359,18 @@ namespace ReportDemo01.RPTDatasets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeProperty() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeLoanBasedOnFund() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeLoanBasedOnNonFund() {
             return false;
         }
         
@@ -376,6 +440,12 @@ namespace ReportDemo01.RPTDatasets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void PropertyRowChangeEventHandler(object sender, PropertyRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void LoanBasedOnFundRowChangeEventHandler(object sender, LoanBasedOnFundRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void LoanBasedOnNonFundRowChangeEventHandler(object sender, LoanBasedOnNonFundRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1843,6 +1913,729 @@ namespace ReportDemo01.RPTDatasets {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LoanBasedOnFundDataTable : global::System.Data.TypedTableBase<LoanBasedOnFundRow> {
+            
+            private global::System.Data.DataColumn columnLoanBasedonFundID;
+            
+            private global::System.Data.DataColumn columnResidentialLoan;
+            
+            private global::System.Data.DataColumn columnRealStateLoan;
+            
+            private global::System.Data.DataColumn columnPersonalLoan;
+            
+            private global::System.Data.DataColumn columnShareDepositLoan;
+            
+            private global::System.Data.DataColumn columnESFULoan;
+            
+            private global::System.Data.DataColumn columnPoorAgriLoan;
+            
+            private global::System.Data.DataColumn columnVehicleloanWheels;
+            
+            private global::System.Data.DataColumn columnVehicleLoan;
+            
+            private global::System.Data.DataColumn columnRentVehicleType;
+            
+            private global::System.Data.DataColumn columnRentVehicleLoan;
+            
+            private global::System.Data.DataColumn columnOtherOneLoan;
+            
+            private global::System.Data.DataColumn columnOtherTwoLoan;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundDataTable() {
+                this.TableName = "LoanBasedOnFund";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal LoanBasedOnFundDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected LoanBasedOnFundDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LoanBasedonFundIDColumn {
+                get {
+                    return this.columnLoanBasedonFundID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ResidentialLoanColumn {
+                get {
+                    return this.columnResidentialLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RealStateLoanColumn {
+                get {
+                    return this.columnRealStateLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PersonalLoanColumn {
+                get {
+                    return this.columnPersonalLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShareDepositLoanColumn {
+                get {
+                    return this.columnShareDepositLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ESFULoanColumn {
+                get {
+                    return this.columnESFULoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PoorAgriLoanColumn {
+                get {
+                    return this.columnPoorAgriLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VehicleloanWheelsColumn {
+                get {
+                    return this.columnVehicleloanWheels;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VehicleLoanColumn {
+                get {
+                    return this.columnVehicleLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RentVehicleTypeColumn {
+                get {
+                    return this.columnRentVehicleType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RentVehicleLoanColumn {
+                get {
+                    return this.columnRentVehicleLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OtherOneLoanColumn {
+                get {
+                    return this.columnOtherOneLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OtherTwoLoanColumn {
+                get {
+                    return this.columnOtherTwoLoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundRow this[int index] {
+                get {
+                    return ((LoanBasedOnFundRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnFundRowChangeEventHandler LoanBasedOnFundRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnFundRowChangeEventHandler LoanBasedOnFundRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnFundRowChangeEventHandler LoanBasedOnFundRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnFundRowChangeEventHandler LoanBasedOnFundRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddLoanBasedOnFundRow(LoanBasedOnFundRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundRow AddLoanBasedOnFundRow(decimal ResidentialLoan, decimal RealStateLoan, decimal PersonalLoan, decimal ShareDepositLoan, decimal ESFULoan, decimal PoorAgriLoan, string VehicleloanWheels, decimal VehicleLoan, string RentVehicleType, decimal RentVehicleLoan, decimal OtherOneLoan, decimal OtherTwoLoan) {
+                LoanBasedOnFundRow rowLoanBasedOnFundRow = ((LoanBasedOnFundRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        ResidentialLoan,
+                        RealStateLoan,
+                        PersonalLoan,
+                        ShareDepositLoan,
+                        ESFULoan,
+                        PoorAgriLoan,
+                        VehicleloanWheels,
+                        VehicleLoan,
+                        RentVehicleType,
+                        RentVehicleLoan,
+                        OtherOneLoan,
+                        OtherTwoLoan};
+                rowLoanBasedOnFundRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLoanBasedOnFundRow);
+                return rowLoanBasedOnFundRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundRow FindByLoanBasedonFundID(int LoanBasedonFundID) {
+                return ((LoanBasedOnFundRow)(this.Rows.Find(new object[] {
+                            LoanBasedonFundID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LoanBasedOnFundDataTable cln = ((LoanBasedOnFundDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LoanBasedOnFundDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnLoanBasedonFundID = base.Columns["LoanBasedonFundID"];
+                this.columnResidentialLoan = base.Columns["ResidentialLoan"];
+                this.columnRealStateLoan = base.Columns["RealStateLoan"];
+                this.columnPersonalLoan = base.Columns["PersonalLoan"];
+                this.columnShareDepositLoan = base.Columns["ShareDepositLoan"];
+                this.columnESFULoan = base.Columns["ESFULoan"];
+                this.columnPoorAgriLoan = base.Columns["PoorAgriLoan"];
+                this.columnVehicleloanWheels = base.Columns["VehicleloanWheels"];
+                this.columnVehicleLoan = base.Columns["VehicleLoan"];
+                this.columnRentVehicleType = base.Columns["RentVehicleType"];
+                this.columnRentVehicleLoan = base.Columns["RentVehicleLoan"];
+                this.columnOtherOneLoan = base.Columns["OtherOneLoan"];
+                this.columnOtherTwoLoan = base.Columns["OtherTwoLoan"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnLoanBasedonFundID = new global::System.Data.DataColumn("LoanBasedonFundID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoanBasedonFundID);
+                this.columnResidentialLoan = new global::System.Data.DataColumn("ResidentialLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnResidentialLoan);
+                this.columnRealStateLoan = new global::System.Data.DataColumn("RealStateLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRealStateLoan);
+                this.columnPersonalLoan = new global::System.Data.DataColumn("PersonalLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonalLoan);
+                this.columnShareDepositLoan = new global::System.Data.DataColumn("ShareDepositLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShareDepositLoan);
+                this.columnESFULoan = new global::System.Data.DataColumn("ESFULoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESFULoan);
+                this.columnPoorAgriLoan = new global::System.Data.DataColumn("PoorAgriLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPoorAgriLoan);
+                this.columnVehicleloanWheels = new global::System.Data.DataColumn("VehicleloanWheels", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVehicleloanWheels);
+                this.columnVehicleLoan = new global::System.Data.DataColumn("VehicleLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVehicleLoan);
+                this.columnRentVehicleType = new global::System.Data.DataColumn("RentVehicleType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRentVehicleType);
+                this.columnRentVehicleLoan = new global::System.Data.DataColumn("RentVehicleLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRentVehicleLoan);
+                this.columnOtherOneLoan = new global::System.Data.DataColumn("OtherOneLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOtherOneLoan);
+                this.columnOtherTwoLoan = new global::System.Data.DataColumn("OtherTwoLoan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOtherTwoLoan);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnLoanBasedonFundID}, true));
+                this.columnLoanBasedonFundID.AutoIncrement = true;
+                this.columnLoanBasedonFundID.AutoIncrementSeed = -1;
+                this.columnLoanBasedonFundID.AutoIncrementStep = -1;
+                this.columnLoanBasedonFundID.AllowDBNull = false;
+                this.columnLoanBasedonFundID.ReadOnly = true;
+                this.columnLoanBasedonFundID.Unique = true;
+                this.columnVehicleloanWheels.MaxLength = 10;
+                this.columnRentVehicleType.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundRow NewLoanBasedOnFundRow() {
+                return ((LoanBasedOnFundRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LoanBasedOnFundRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LoanBasedOnFundRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LoanBasedOnFundRowChanged != null)) {
+                    this.LoanBasedOnFundRowChanged(this, new LoanBasedOnFundRowChangeEvent(((LoanBasedOnFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LoanBasedOnFundRowChanging != null)) {
+                    this.LoanBasedOnFundRowChanging(this, new LoanBasedOnFundRowChangeEvent(((LoanBasedOnFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LoanBasedOnFundRowDeleted != null)) {
+                    this.LoanBasedOnFundRowDeleted(this, new LoanBasedOnFundRowChangeEvent(((LoanBasedOnFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LoanBasedOnFundRowDeleting != null)) {
+                    this.LoanBasedOnFundRowDeleting(this, new LoanBasedOnFundRowChangeEvent(((LoanBasedOnFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveLoanBasedOnFundRow(LoanBasedOnFundRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Dhito ds = new Dhito();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LoanBasedOnFundDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LoanBasedOnNonFundDataTable : global::System.Data.TypedTableBase<LoanBasedOnNonFundRow> {
+            
+            private global::System.Data.DataColumn columnNonFundID;
+            
+            private global::System.Data.DataColumn columnNonFundItem;
+            
+            private global::System.Data.DataColumn columnAmount;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundDataTable() {
+                this.TableName = "LoanBasedOnNonFund";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal LoanBasedOnNonFundDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected LoanBasedOnNonFundDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NonFundIDColumn {
+                get {
+                    return this.columnNonFundID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NonFundItemColumn {
+                get {
+                    return this.columnNonFundItem;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AmountColumn {
+                get {
+                    return this.columnAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundRow this[int index] {
+                get {
+                    return ((LoanBasedOnNonFundRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnNonFundRowChangeEventHandler LoanBasedOnNonFundRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnNonFundRowChangeEventHandler LoanBasedOnNonFundRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnNonFundRowChangeEventHandler LoanBasedOnNonFundRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event LoanBasedOnNonFundRowChangeEventHandler LoanBasedOnNonFundRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddLoanBasedOnNonFundRow(LoanBasedOnNonFundRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundRow AddLoanBasedOnNonFundRow(string NonFundItem, decimal Amount) {
+                LoanBasedOnNonFundRow rowLoanBasedOnNonFundRow = ((LoanBasedOnNonFundRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        NonFundItem,
+                        Amount};
+                rowLoanBasedOnNonFundRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLoanBasedOnNonFundRow);
+                return rowLoanBasedOnNonFundRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundRow FindByNonFundID(int NonFundID) {
+                return ((LoanBasedOnNonFundRow)(this.Rows.Find(new object[] {
+                            NonFundID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LoanBasedOnNonFundDataTable cln = ((LoanBasedOnNonFundDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LoanBasedOnNonFundDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnNonFundID = base.Columns["NonFundID"];
+                this.columnNonFundItem = base.Columns["NonFundItem"];
+                this.columnAmount = base.Columns["Amount"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnNonFundID = new global::System.Data.DataColumn("NonFundID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNonFundID);
+                this.columnNonFundItem = new global::System.Data.DataColumn("NonFundItem", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNonFundItem);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNonFundID}, true));
+                this.columnNonFundID.AutoIncrement = true;
+                this.columnNonFundID.AutoIncrementSeed = -1;
+                this.columnNonFundID.AutoIncrementStep = -1;
+                this.columnNonFundID.AllowDBNull = false;
+                this.columnNonFundID.ReadOnly = true;
+                this.columnNonFundID.Unique = true;
+                this.columnNonFundItem.MaxLength = 200;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundRow NewLoanBasedOnNonFundRow() {
+                return ((LoanBasedOnNonFundRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LoanBasedOnNonFundRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LoanBasedOnNonFundRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LoanBasedOnNonFundRowChanged != null)) {
+                    this.LoanBasedOnNonFundRowChanged(this, new LoanBasedOnNonFundRowChangeEvent(((LoanBasedOnNonFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LoanBasedOnNonFundRowChanging != null)) {
+                    this.LoanBasedOnNonFundRowChanging(this, new LoanBasedOnNonFundRowChangeEvent(((LoanBasedOnNonFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LoanBasedOnNonFundRowDeleted != null)) {
+                    this.LoanBasedOnNonFundRowDeleted(this, new LoanBasedOnNonFundRowChangeEvent(((LoanBasedOnNonFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LoanBasedOnNonFundRowDeleting != null)) {
+                    this.LoanBasedOnNonFundRowDeleting(this, new LoanBasedOnNonFundRowChangeEvent(((LoanBasedOnNonFundRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveLoanBasedOnNonFundRow(LoanBasedOnNonFundRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Dhito ds = new Dhito();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LoanBasedOnNonFundDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class ApplicationRow : global::System.Data.DataRow {
@@ -2731,6 +3524,450 @@ namespace ReportDemo01.RPTDatasets {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LoanBasedOnFundRow : global::System.Data.DataRow {
+            
+            private LoanBasedOnFundDataTable tableLoanBasedOnFund;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal LoanBasedOnFundRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLoanBasedOnFund = ((LoanBasedOnFundDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int LoanBasedonFundID {
+                get {
+                    return ((int)(this[this.tableLoanBasedOnFund.LoanBasedonFundIDColumn]));
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.LoanBasedonFundIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ResidentialLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.ResidentialLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ResidentialLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.ResidentialLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal RealStateLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.RealStateLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RealStateLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.RealStateLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PersonalLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.PersonalLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonalLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.PersonalLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ShareDepositLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.ShareDepositLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShareDepositLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.ShareDepositLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ESFULoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.ESFULoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ESFULoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.ESFULoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PoorAgriLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.PoorAgriLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PoorAgriLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.PoorAgriLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VehicleloanWheels {
+                get {
+                    try {
+                        return ((string)(this[this.tableLoanBasedOnFund.VehicleloanWheelsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VehicleloanWheels\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.VehicleloanWheelsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VehicleLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.VehicleLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VehicleLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.VehicleLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RentVehicleType {
+                get {
+                    try {
+                        return ((string)(this[this.tableLoanBasedOnFund.RentVehicleTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RentVehicleType\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.RentVehicleTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal RentVehicleLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.RentVehicleLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RentVehicleLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.RentVehicleLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal OtherOneLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.OtherOneLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OtherOneLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.OtherOneLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal OtherTwoLoan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnFund.OtherTwoLoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OtherTwoLoan\' in table \'LoanBasedOnFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnFund.OtherTwoLoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsResidentialLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.ResidentialLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetResidentialLoanNull() {
+                this[this.tableLoanBasedOnFund.ResidentialLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRealStateLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.RealStateLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRealStateLoanNull() {
+                this[this.tableLoanBasedOnFund.RealStateLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPersonalLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.PersonalLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPersonalLoanNull() {
+                this[this.tableLoanBasedOnFund.PersonalLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShareDepositLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.ShareDepositLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShareDepositLoanNull() {
+                this[this.tableLoanBasedOnFund.ShareDepositLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsESFULoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.ESFULoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetESFULoanNull() {
+                this[this.tableLoanBasedOnFund.ESFULoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPoorAgriLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.PoorAgriLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPoorAgriLoanNull() {
+                this[this.tableLoanBasedOnFund.PoorAgriLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVehicleloanWheelsNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.VehicleloanWheelsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVehicleloanWheelsNull() {
+                this[this.tableLoanBasedOnFund.VehicleloanWheelsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVehicleLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.VehicleLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVehicleLoanNull() {
+                this[this.tableLoanBasedOnFund.VehicleLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRentVehicleTypeNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.RentVehicleTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRentVehicleTypeNull() {
+                this[this.tableLoanBasedOnFund.RentVehicleTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRentVehicleLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.RentVehicleLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRentVehicleLoanNull() {
+                this[this.tableLoanBasedOnFund.RentVehicleLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOtherOneLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.OtherOneLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOtherOneLoanNull() {
+                this[this.tableLoanBasedOnFund.OtherOneLoanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOtherTwoLoanNull() {
+                return this.IsNull(this.tableLoanBasedOnFund.OtherTwoLoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOtherTwoLoanNull() {
+                this[this.tableLoanBasedOnFund.OtherTwoLoanColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LoanBasedOnNonFundRow : global::System.Data.DataRow {
+            
+            private LoanBasedOnNonFundDataTable tableLoanBasedOnNonFund;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal LoanBasedOnNonFundRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLoanBasedOnNonFund = ((LoanBasedOnNonFundDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int NonFundID {
+                get {
+                    return ((int)(this[this.tableLoanBasedOnNonFund.NonFundIDColumn]));
+                }
+                set {
+                    this[this.tableLoanBasedOnNonFund.NonFundIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NonFundItem {
+                get {
+                    try {
+                        return ((string)(this[this.tableLoanBasedOnNonFund.NonFundItemColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NonFundItem\' in table \'LoanBasedOnNonFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnNonFund.NonFundItemColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Amount {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLoanBasedOnNonFund.AmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'LoanBasedOnNonFund\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLoanBasedOnNonFund.AmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNonFundItemNull() {
+                return this.IsNull(this.tableLoanBasedOnNonFund.NonFundItemColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNonFundItemNull() {
+                this[this.tableLoanBasedOnNonFund.NonFundItemColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAmountNull() {
+                return this.IsNull(this.tableLoanBasedOnNonFund.AmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAmountNull() {
+                this[this.tableLoanBasedOnNonFund.AmountColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2852,6 +4089,74 @@ namespace ReportDemo01.RPTDatasets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PropertyRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class LoanBasedOnFundRowChangeEvent : global::System.EventArgs {
+            
+            private LoanBasedOnFundRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundRowChangeEvent(LoanBasedOnFundRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnFundRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class LoanBasedOnNonFundRowChangeEvent : global::System.EventArgs {
+            
+            private LoanBasedOnNonFundRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundRowChangeEvent(LoanBasedOnNonFundRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LoanBasedOnNonFundRow Row {
                 get {
                     return this.eventRow;
                 }

@@ -29,5 +29,7 @@ namespace ReportDemo01
         public virtual DbSet<Home> Homes { get; set; }
         public virtual DbSet<Land> Lands { get; set; }
         public virtual DbSet<Property> Properties { get; set; }
+        public virtual DbSet<LoanBasedOnFund> LoanBasedOnFunds { get; set; }
+        public virtual DbSet<LoanBasedOnNonFund> LoanBasedOnNonFunds { get; set; }
     }
 }

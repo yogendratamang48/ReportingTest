@@ -6,9 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b5cb5304dc4e4acd89bf5aa1769bb823" Name="Diagram1">
         <EntityTypeShape EntityType="ShangrilaReportsModel.Application" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShangrilaReportsModel.Home" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShangrilaReportsModel.Home" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ShangrilaReportsModel.Land" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ShangrilaReportsModel.Property" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShangrilaReportsModel.LoanBasedOnFund" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="ShangrilaReportsModel.LoanBasedOnNonFund" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
