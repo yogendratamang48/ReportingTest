@@ -33,6 +33,12 @@ namespace ReportDemo01.Controllers
             List< LoanBasedOnFund> lstLbof=new List<LoanBasedOnFund>();
 
             List<LoanBasedOnNonFund> lstLbonf;
+            IEnumerable<Objective> lstObjectives;
+            List<Objective> lftObjectives;
+            List<Objective> rtObjectives;
+            List<BankAccountInfo> lstBanks;
+            List<ProjectInvestment> lstProjectInvestments=new List<ProjectInvestment>();
+          
 
             Warning[] warnings;
             string mimeType;
@@ -47,8 +53,14 @@ namespace ReportDemo01.Controllers
                 LoanBasedOnFund lbof = dc.LoanBasedOnFunds.FirstOrDefault(s => s.LoanBasedonFundID == 1);
                 lstLbof.Add(lbof);
                 lstLbonf = dc.LoanBasedOnNonFunds.ToList();
+                lstObjectives = dc.Objectives.ToList();
+                lstBanks = dc.BankAccountInfoes.ToList();
+                ProjectInvestment pi = dc.ProjectInvestments.FirstOrDefault(s => s.ProjectInvestmentID == 1);
+                lstProjectInvestments.Add(pi);
             }
-            
+            lftObjectives = lstObjectives.Where((c, i) => i % 2 == 0).ToList();
+            rtObjectives = lstObjectives.Where((c, i) => i % 2 != 0).ToList();
+
             //DataTable table = ReportsHelper.ConvertoToDataTable(homes);
             var viewer = new ReportViewer();
             viewer.LocalReport.ReportPath = @"Reports\RPDhito.rdlc";
@@ -56,14 +68,30 @@ namespace ReportDemo01.Controllers
             ReportDataSource ap = new ReportDataSource("Applications", apps);
             ReportDataSource dtLbof = new ReportDataSource("LBOF", lstLbof);
             ReportDataSource dtLbonf = new ReportDataSource("LBONF", lstLbonf);
+            ReportDataSource rdLeftObjectives = new ReportDataSource("ObjectivesLeft", lftObjectives);
+            ReportDataSource rdRightObjectives = new ReportDataSource("ObjectivesRight", rtObjectives);
+            ReportDataSource projectInvestment = new ReportDataSource("ProjectInvestment", lstProjectInvestments);
+            ReportDataSource banks = new ReportDataSource("BankAccountInfo", lstBanks);
+
+            //ReportDataSource objectives = new ReportDataSource("Objectives", lstObjectives);
+
+
+            viewer.LocalReport.DataSources.Clear();
+
             viewer.LocalReport.DataSources.Add(rdc);
             viewer.LocalReport.DataSources.Add(ap);
             viewer.LocalReport.DataSources.Add(dtLbof);
             viewer.LocalReport.DataSources.Add(dtLbonf);
+            viewer.LocalReport.DataSources.Add(rdLeftObjectives);
+            viewer.LocalReport.DataSources.Add(rdRightObjectives);
+            viewer.LocalReport.DataSources.Add(projectInvestment);
+            viewer.LocalReport.DataSources.Add(banks);
+            //viewer.LocalReport.DataSources.Add(objectives);
 
 
 
             viewer.LocalReport.Refresh();
+            
             var bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
             return new FileContentResult(bytes, mimeType);
         }

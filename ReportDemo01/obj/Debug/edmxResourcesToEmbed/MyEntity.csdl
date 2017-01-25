@@ -59,6 +59,9 @@
     <EntitySet Name="Properties" EntityType="Self.Property" />
     <EntitySet Name="LoanBasedOnFunds" EntityType="ShangrilaReportsModel.LoanBasedOnFund" />
     <EntitySet Name="LoanBasedOnNonFunds" EntityType="ShangrilaReportsModel.LoanBasedOnNonFund" />
+    <EntitySet Name="Objectives" EntityType="ShangrilaReportsModel.Objective" />
+    <EntitySet Name="ProjectInvestments" EntityType="ShangrilaReportsModel.ProjectInvestment" />
+    <EntitySet Name="BankAccountInfoes" EntityType="ShangrilaReportsModel.BankAccountInfo" />
   </EntityContainer>
   <EntityType Name="LoanBasedOnFund">
     <Key>
@@ -84,6 +87,35 @@
     </Key>
     <Property Name="NonFundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NonFundItem" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Objective">
+    <Key>
+      <PropertyRef Name="LoanObjectiveID" />
+    </Key>
+    <Property Name="LoanObjectiveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoanObjective" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProjectInvestment">
+    <Key>
+      <PropertyRef Name="ProjectInvestmentID" />
+    </Key>
+    <Property Name="ProjectInvestmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalInverstment" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ApplicantInvestment" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LoanInvestment" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LoanPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BankAccountInfo">
+    <Key>
+      <PropertyRef Name="BankAccountInfoID" />
+    </Key>
+    <Property Name="BankAccountInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TypeOfAccount" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
   </EntityType>
 </Schema>

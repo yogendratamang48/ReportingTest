@@ -13,6 +13,16 @@
           <Property Name="ApplicantName" Type="nvarchar" MaxLength="200" />
           <Property Name="Accepters" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="BankAccountInfo">
+          <Key>
+            <PropertyRef Name="BankAccountInfoID" />
+          </Key>
+          <Property Name="BankAccountInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="TypeOfAccount" Type="nvarchar" MaxLength="200" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
         <EntityType Name="Home">
           <Key>
             <PropertyRef Name="HomeID" />
@@ -66,6 +76,25 @@
           <Property Name="NonFundItem" Type="nvarchar" MaxLength="200" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
+        <EntityType Name="Objective">
+          <Key>
+            <PropertyRef Name="LoanObjectiveID" />
+          </Key>
+          <Property Name="LoanObjectiveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoanObjective" Type="nvarchar" MaxLength="200" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ProjectInvestment">
+          <Key>
+            <PropertyRef Name="ProjectInvestmentID" />
+          </Key>
+          <Property Name="ProjectInvestmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TotalInverstment" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ApplicantInvestment" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LoanInvestment" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LoanPercentage" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="200" />
+        </EntityType>
         <EntityType Name="Property">
           <Key>
             <PropertyRef Name="PropertyID" />
@@ -85,10 +114,13 @@
         </EntityType>
         <EntityContainer Name="ShangrilaReportsModelStoreContainer">
           <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BankAccountInfo" EntityType="Self.BankAccountInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoanBasedOnFund" EntityType="Self.LoanBasedOnFund" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoanBasedOnNonFund" EntityType="Self.LoanBasedOnNonFund" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Objective" EntityType="Self.Objective" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectInvestment" EntityType="Self.ProjectInvestment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Property" EntityType="Self.Property" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -154,6 +186,9 @@
           <EntitySet Name="Properties" EntityType="Self.Property" />
           <EntitySet Name="LoanBasedOnFunds" EntityType="ShangrilaReportsModel.LoanBasedOnFund" />
           <EntitySet Name="LoanBasedOnNonFunds" EntityType="ShangrilaReportsModel.LoanBasedOnNonFund" />
+          <EntitySet Name="Objectives" EntityType="ShangrilaReportsModel.Objective" />
+          <EntitySet Name="ProjectInvestments" EntityType="ShangrilaReportsModel.ProjectInvestment" />
+          <EntitySet Name="BankAccountInfoes" EntityType="ShangrilaReportsModel.BankAccountInfo" />
           </EntityContainer>
         <EntityType Name="LoanBasedOnFund">
           <Key>
@@ -179,6 +214,35 @@
           </Key>
           <Property Name="NonFundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NonFundItem" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Objective">
+          <Key>
+            <PropertyRef Name="LoanObjectiveID" />
+          </Key>
+          <Property Name="LoanObjectiveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoanObjective" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProjectInvestment">
+          <Key>
+            <PropertyRef Name="ProjectInvestmentID" />
+          </Key>
+          <Property Name="ProjectInvestmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalInverstment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ApplicantInvestment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LoanInvestment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LoanPercentage" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BankAccountInfo">
+          <Key>
+            <PropertyRef Name="BankAccountInfoID" />
+          </Key>
+          <Property Name="BankAccountInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfAccount" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
       </Schema>
@@ -268,6 +332,38 @@
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="NonFundItem" ColumnName="NonFundItem" />
                 <ScalarProperty Name="NonFundID" ColumnName="NonFundID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Objectives">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.Objective">
+              <MappingFragment StoreEntitySet="Objective">
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="LoanObjective" ColumnName="LoanObjective" />
+                <ScalarProperty Name="LoanObjectiveID" ColumnName="LoanObjectiveID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectInvestments">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.ProjectInvestment">
+              <MappingFragment StoreEntitySet="ProjectInvestment">
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="LoanPercentage" ColumnName="LoanPercentage" />
+                <ScalarProperty Name="LoanInvestment" ColumnName="LoanInvestment" />
+                <ScalarProperty Name="ApplicantInvestment" ColumnName="ApplicantInvestment" />
+                <ScalarProperty Name="TotalInverstment" ColumnName="TotalInverstment" />
+                <ScalarProperty Name="ProjectInvestmentID" ColumnName="ProjectInvestmentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankAccountInfoes">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.BankAccountInfo">
+              <MappingFragment StoreEntitySet="BankAccountInfo">
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TypeOfAccount" ColumnName="TypeOfAccount" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="BankAccountInfoID" ColumnName="BankAccountInfoID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

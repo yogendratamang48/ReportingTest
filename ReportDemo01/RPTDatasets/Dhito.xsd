@@ -266,6 +266,74 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Objective" msprop:Generator_TableClassName="ObjectiveDataTable" msprop:Generator_TableVarName="tableObjective" msprop:Generator_RowChangedName="ObjectiveRowChanged" msprop:Generator_TablePropName="Objective" msprop:Generator_RowDeletingName="ObjectiveRowDeleting" msprop:Generator_RowChangingName="ObjectiveRowChanging" msprop:Generator_RowEvHandlerName="ObjectiveRowChangeEventHandler" msprop:Generator_RowDeletedName="ObjectiveRowDeleted" msprop:Generator_RowClassName="ObjectiveRow" msprop:Generator_UserTableName="Objective" msprop:Generator_RowEvArgName="ObjectiveRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LoanObjectiveID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLoanObjectiveID" msprop:Generator_ColumnPropNameInRow="LoanObjectiveID" msprop:Generator_ColumnPropNameInTable="LoanObjectiveIDColumn" msprop:Generator_UserColumnName="LoanObjectiveID" type="xs:int" />
+              <xs:element name="LoanObjective" msprop:Generator_ColumnVarNameInTable="columnLoanObjective" msprop:Generator_ColumnPropNameInRow="LoanObjective" msprop:Generator_ColumnPropNameInTable="LoanObjectiveColumn" msprop:Generator_UserColumnName="LoanObjective" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProjectInvestment" msprop:Generator_TableClassName="ProjectInvestmentDataTable" msprop:Generator_TableVarName="tableProjectInvestment" msprop:Generator_TablePropName="ProjectInvestment" msprop:Generator_RowDeletingName="ProjectInvestmentRowDeleting" msprop:Generator_RowChangingName="ProjectInvestmentRowChanging" msprop:Generator_RowEvHandlerName="ProjectInvestmentRowChangeEventHandler" msprop:Generator_RowDeletedName="ProjectInvestmentRowDeleted" msprop:Generator_UserTableName="ProjectInvestment" msprop:Generator_RowChangedName="ProjectInvestmentRowChanged" msprop:Generator_RowEvArgName="ProjectInvestmentRowChangeEvent" msprop:Generator_RowClassName="ProjectInvestmentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProjectInvestmentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProjectInvestmentID" msprop:Generator_ColumnPropNameInRow="ProjectInvestmentID" msprop:Generator_ColumnPropNameInTable="ProjectInvestmentIDColumn" msprop:Generator_UserColumnName="ProjectInvestmentID" type="xs:int" />
+              <xs:element name="TotalInverstment" msprop:Generator_ColumnVarNameInTable="columnTotalInverstment" msprop:Generator_ColumnPropNameInRow="TotalInverstment" msprop:Generator_ColumnPropNameInTable="TotalInverstmentColumn" msprop:Generator_UserColumnName="TotalInverstment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ApplicantInvestment" msprop:Generator_ColumnVarNameInTable="columnApplicantInvestment" msprop:Generator_ColumnPropNameInRow="ApplicantInvestment" msprop:Generator_ColumnPropNameInTable="ApplicantInvestmentColumn" msprop:Generator_UserColumnName="ApplicantInvestment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LoanInvestment" msprop:Generator_ColumnVarNameInTable="columnLoanInvestment" msprop:Generator_ColumnPropNameInRow="LoanInvestment" msprop:Generator_ColumnPropNameInTable="LoanInvestmentColumn" msprop:Generator_UserColumnName="LoanInvestment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LoanPercentage" msprop:Generator_ColumnVarNameInTable="columnLoanPercentage" msprop:Generator_ColumnPropNameInRow="LoanPercentage" msprop:Generator_ColumnPropNameInTable="LoanPercentageColumn" msprop:Generator_UserColumnName="LoanPercentage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BankAccountInfo" msprop:Generator_TableClassName="BankAccountInfoDataTable" msprop:Generator_TableVarName="tableBankAccountInfo" msprop:Generator_TablePropName="BankAccountInfo" msprop:Generator_RowDeletingName="BankAccountInfoRowDeleting" msprop:Generator_RowChangingName="BankAccountInfoRowChanging" msprop:Generator_RowEvHandlerName="BankAccountInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="BankAccountInfoRowDeleted" msprop:Generator_UserTableName="BankAccountInfo" msprop:Generator_RowChangedName="BankAccountInfoRowChanged" msprop:Generator_RowEvArgName="BankAccountInfoRowChangeEvent" msprop:Generator_RowClassName="BankAccountInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BankAccountInfoID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBankAccountInfoID" msprop:Generator_ColumnPropNameInRow="BankAccountInfoID" msprop:Generator_ColumnPropNameInTable="BankAccountInfoIDColumn" msprop:Generator_UserColumnName="BankAccountInfoID" type="xs:int" />
+              <xs:element name="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_UserColumnName="BankName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TypeOfAccount" msprop:Generator_ColumnVarNameInTable="columnTypeOfAccount" msprop:Generator_ColumnPropNameInRow="TypeOfAccount" msprop:Generator_ColumnPropNameInTable="TypeOfAccountColumn" msprop:Generator_UserColumnName="TypeOfAccount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -291,6 +359,18 @@
     <xs:unique name="LoanBasedOnNonFund_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:LoanBasedOnNonFund" />
       <xs:field xpath="mstns:NonFundID" />
+    </xs:unique>
+    <xs:unique name="Objective_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Objective" />
+      <xs:field xpath="mstns:LoanObjectiveID" />
+    </xs:unique>
+    <xs:unique name="ProjectInvestment_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProjectInvestment" />
+      <xs:field xpath="mstns:ProjectInvestmentID" />
+    </xs:unique>
+    <xs:unique name="BankAccountInfo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BankAccountInfo" />
+      <xs:field xpath="mstns:BankAccountInfoID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

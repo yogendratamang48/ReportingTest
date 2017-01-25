@@ -85,5 +85,37 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Objectives">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.Objective">
+        <MappingFragment StoreEntitySet="Objective">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="LoanObjective" ColumnName="LoanObjective" />
+          <ScalarProperty Name="LoanObjectiveID" ColumnName="LoanObjectiveID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectInvestments">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.ProjectInvestment">
+        <MappingFragment StoreEntitySet="ProjectInvestment">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="LoanPercentage" ColumnName="LoanPercentage" />
+          <ScalarProperty Name="LoanInvestment" ColumnName="LoanInvestment" />
+          <ScalarProperty Name="ApplicantInvestment" ColumnName="ApplicantInvestment" />
+          <ScalarProperty Name="TotalInverstment" ColumnName="TotalInverstment" />
+          <ScalarProperty Name="ProjectInvestmentID" ColumnName="ProjectInvestmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankAccountInfoes">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.BankAccountInfo">
+        <MappingFragment StoreEntitySet="BankAccountInfo">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TypeOfAccount" ColumnName="TypeOfAccount" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankAccountInfoID" ColumnName="BankAccountInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

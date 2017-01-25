@@ -31,5 +31,8 @@ namespace ReportDemo01
         public virtual DbSet<Property> Properties { get; set; }
         public virtual DbSet<LoanBasedOnFund> LoanBasedOnFunds { get; set; }
         public virtual DbSet<LoanBasedOnNonFund> LoanBasedOnNonFunds { get; set; }
+        public virtual DbSet<Objective> Objectives { get; set; }
+        public virtual DbSet<ProjectInvestment> ProjectInvestments { get; set; }
+        public virtual DbSet<BankAccountInfo> BankAccountInfoes { get; set; }
     }
 }

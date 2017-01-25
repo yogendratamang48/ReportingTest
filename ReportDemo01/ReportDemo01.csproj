@@ -160,6 +160,9 @@
       <DependentUpon>MyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BankAccountInfo.cs">
+      <DependentUpon>MyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -192,11 +195,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyEntity.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Objective.cs">
+      <DependentUpon>MyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInvestment.cs">
+      <DependentUpon>MyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs">
       <DependentUpon>MyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsHelper.cs" />
+    <Compile Include="RPTDatasets\Dhito.cs">
+      <DependentUpon>Dhito.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RPTDatasets\Dhito.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -283,7 +295,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1356</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1356/</IISUrl>
+          <IISUrl>http://localhost:12356/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
