@@ -38,6 +38,7 @@ namespace ReportDemo01.Controllers
             List<Objective> rtObjectives;
             List<BankAccountInfo> lstBanks;
             List<ProjectInvestment> lstProjectInvestments=new List<ProjectInvestment>();
+            LastPagePara lst;
           
 
             Warning[] warnings;
@@ -45,6 +46,7 @@ namespace ReportDemo01.Controllers
             string[] streamids;
             string encoding;
             string filenameExtension;
+            
 
             using (ShangrilaReportsEntities dc = new ShangrilaReportsEntities())
             {
@@ -57,6 +59,7 @@ namespace ReportDemo01.Controllers
                 lstBanks = dc.BankAccountInfoes.ToList();
                 ProjectInvestment pi = dc.ProjectInvestments.FirstOrDefault(s => s.ProjectInvestmentID == 1);
                 lstProjectInvestments.Add(pi);
+                lst = dc.LastPageParas.FirstOrDefault(a => a.LastPageParaID == 1);
             }
             lftObjectives = lstObjectives.Where((c, i) => i % 2 == 0).ToList();
             rtObjectives = lstObjectives.Where((c, i) => i % 2 != 0).ToList();
@@ -73,8 +76,12 @@ namespace ReportDemo01.Controllers
             ReportDataSource projectInvestment = new ReportDataSource("ProjectInvestment", lstProjectInvestments);
             ReportDataSource banks = new ReportDataSource("BankAccountInfo", lstBanks);
 
+
+
             //ReportDataSource objectives = new ReportDataSource("Objectives", lstObjectives);
 
+            ReportParameter lastPageFirstPara = new ReportParameter("LastPageFirstPara",lst.FirstPara.ToString());
+            ReportParameter accNumber = new ReportParameter("AccountNumber",lstBanks[0].AccountNumber.ToString());
 
             viewer.LocalReport.DataSources.Clear();
 
@@ -86,6 +93,7 @@ namespace ReportDemo01.Controllers
             viewer.LocalReport.DataSources.Add(rdRightObjectives);
             viewer.LocalReport.DataSources.Add(projectInvestment);
             viewer.LocalReport.DataSources.Add(banks);
+            viewer.LocalReport.SetParameters(new ReportParameter[] { lastPageFirstPara, accNumber});
             //viewer.LocalReport.DataSources.Add(objectives);
 
 

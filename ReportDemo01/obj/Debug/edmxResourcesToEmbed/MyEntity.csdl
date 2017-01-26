@@ -62,6 +62,7 @@
     <EntitySet Name="Objectives" EntityType="ShangrilaReportsModel.Objective" />
     <EntitySet Name="ProjectInvestments" EntityType="ShangrilaReportsModel.ProjectInvestment" />
     <EntitySet Name="BankAccountInfoes" EntityType="ShangrilaReportsModel.BankAccountInfo" />
+    <EntitySet Name="LastPageParas" EntityType="ShangrilaReportsModel.LastPagePara" />
   </EntityContainer>
   <EntityType Name="LoanBasedOnFund">
     <Key>
@@ -117,5 +118,14 @@
     <Property Name="AccountNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="TypeOfAccount" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="LastPagePara">
+    <Key>
+      <PropertyRef Name="LastPageParaID" />
+    </Key>
+    <Property Name="LastPageParaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstPara" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SecondPara" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="FormType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

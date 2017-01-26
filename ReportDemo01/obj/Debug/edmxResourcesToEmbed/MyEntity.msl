@@ -117,5 +117,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="LastPageParas">
+      <EntityTypeMapping TypeName="ShangrilaReportsModel.LastPagePara">
+        <MappingFragment StoreEntitySet="LastPagePara">
+          <ScalarProperty Name="FormType" ColumnName="FormType" />
+          <ScalarProperty Name="SecondPara" ColumnName="SecondPara" />
+          <ScalarProperty Name="FirstPara" ColumnName="FirstPara" />
+          <ScalarProperty Name="LastPageParaID" ColumnName="LastPageParaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

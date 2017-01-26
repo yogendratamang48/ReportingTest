@@ -61,3 +61,4 @@ C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo0
 C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo01\obj\Debug\RdlCompile.compiled
 C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo01\obj\Debug\ReportDemo01.dll
 C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo01\obj\Debug\ReportDemo01.pdb
+C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo01\obj\Debug\ReportDemo01.csprojResolveAssemblyReference.cache

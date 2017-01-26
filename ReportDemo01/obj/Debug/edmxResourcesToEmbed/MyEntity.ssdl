@@ -45,6 +45,15 @@
     <Property Name="Type" Type="nvarchar" MaxLength="50" />
     <Property Name="Note" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="LastPagePara">
+    <Key>
+      <PropertyRef Name="LastPageParaID" />
+    </Key>
+    <Property Name="LastPageParaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstPara" Type="nvarchar" MaxLength="2000" />
+    <Property Name="SecondPara" Type="nvarchar" MaxLength="2000" />
+    <Property Name="FormType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="LoanBasedOnFund">
     <Key>
       <PropertyRef Name="LoanBasedonFundID" />
@@ -112,6 +121,7 @@
     <EntitySet Name="BankAccountInfo" EntityType="Self.BankAccountInfo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LastPagePara" EntityType="Self.LastPagePara" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoanBasedOnFund" EntityType="Self.LoanBasedOnFund" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoanBasedOnNonFund" EntityType="Self.LoanBasedOnNonFund" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Objective" EntityType="Self.Objective" Schema="dbo" store:Type="Tables" />

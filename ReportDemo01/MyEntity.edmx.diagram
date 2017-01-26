@@ -14,6 +14,7 @@
         <EntityTypeShape EntityType="ShangrilaReportsModel.Objective" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="ShangrilaReportsModel.ProjectInvestment" Width="1.5" PointX="7.375" PointY="3.75" />
         <EntityTypeShape EntityType="ShangrilaReportsModel.BankAccountInfo" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ShangrilaReportsModel.LastPagePara" Width="1.5" PointX="7.125" PointY="6.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

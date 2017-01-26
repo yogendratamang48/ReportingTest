@@ -34,5 +34,6 @@ namespace ReportDemo01
         public virtual DbSet<Objective> Objectives { get; set; }
         public virtual DbSet<ProjectInvestment> ProjectInvestments { get; set; }
         public virtual DbSet<BankAccountInfo> BankAccountInfoes { get; set; }
+        public virtual DbSet<LastPagePara> LastPageParas { get; set; }
     }
 }

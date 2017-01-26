@@ -50,6 +50,15 @@
           <Property Name="Type" Type="nvarchar" MaxLength="50" />
           <Property Name="Note" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="LastPagePara">
+          <Key>
+            <PropertyRef Name="LastPageParaID" />
+          </Key>
+          <Property Name="LastPageParaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstPara" Type="nvarchar" MaxLength="2000" />
+          <Property Name="SecondPara" Type="nvarchar" MaxLength="2000" />
+          <Property Name="FormType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="LoanBasedOnFund">
           <Key>
             <PropertyRef Name="LoanBasedonFundID" />
@@ -117,6 +126,7 @@
           <EntitySet Name="BankAccountInfo" EntityType="Self.BankAccountInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Land" EntityType="Self.Land" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LastPagePara" EntityType="Self.LastPagePara" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoanBasedOnFund" EntityType="Self.LoanBasedOnFund" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoanBasedOnNonFund" EntityType="Self.LoanBasedOnNonFund" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Objective" EntityType="Self.Objective" Schema="dbo" store:Type="Tables" />
@@ -189,6 +199,7 @@
           <EntitySet Name="Objectives" EntityType="ShangrilaReportsModel.Objective" />
           <EntitySet Name="ProjectInvestments" EntityType="ShangrilaReportsModel.ProjectInvestment" />
           <EntitySet Name="BankAccountInfoes" EntityType="ShangrilaReportsModel.BankAccountInfo" />
+          <EntitySet Name="LastPageParas" EntityType="ShangrilaReportsModel.LastPagePara" />
           </EntityContainer>
         <EntityType Name="LoanBasedOnFund">
           <Key>
@@ -244,6 +255,15 @@
           <Property Name="AccountNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="TypeOfAccount" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="LastPagePara">
+          <Key>
+            <PropertyRef Name="LastPageParaID" />
+          </Key>
+          <Property Name="LastPageParaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstPara" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="SecondPara" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="FormType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -364,6 +384,16 @@
                 <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
                 <ScalarProperty Name="BankName" ColumnName="BankName" />
                 <ScalarProperty Name="BankAccountInfoID" ColumnName="BankAccountInfoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LastPageParas">
+            <EntityTypeMapping TypeName="ShangrilaReportsModel.LastPagePara">
+              <MappingFragment StoreEntitySet="LastPagePara">
+                <ScalarProperty Name="FormType" ColumnName="FormType" />
+                <ScalarProperty Name="SecondPara" ColumnName="SecondPara" />
+                <ScalarProperty Name="FirstPara" ColumnName="FirstPara" />
+                <ScalarProperty Name="LastPageParaID" ColumnName="LastPageParaID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
