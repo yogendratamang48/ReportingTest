@@ -66,7 +66,7 @@ namespace ReportDemo01.Controllers
 
             //DataTable table = ReportsHelper.ConvertoToDataTable(homes);
             var viewer = new ReportViewer();
-            viewer.LocalReport.ReportPath = @"Reports\RPDhito.rdlc";
+            viewer.LocalReport.ReportPath = @"Reports\EkalKarjaForm.rdlc";
             ReportDataSource rdc = new ReportDataSource("Homes", homes);
             ReportDataSource ap = new ReportDataSource("Applications", apps);
             ReportDataSource dtLbof = new ReportDataSource("LBOF", lstLbof);
