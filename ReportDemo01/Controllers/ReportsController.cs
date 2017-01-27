@@ -1,8 +1,10 @@
-﻿using Microsoft.Reporting.WebForms;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using Microsoft.Reporting.WebForms;
 using ReportDemo01.Reports;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -46,7 +48,8 @@ namespace ReportDemo01.Controllers
             string[] streamids;
             string encoding;
             string filenameExtension;
-            
+            List<String> lstString;
+            List<LongMessage> lstLongMessage=new List<LongMessage>();
 
             using (ShangrilaReportsEntities dc = new ShangrilaReportsEntities())
             {
@@ -63,6 +66,11 @@ namespace ReportDemo01.Controllers
             }
             lftObjectives = lstObjectives.Where((c, i) => i % 2 == 0).ToList();
             rtObjectives = lstObjectives.Where((c, i) => i % 2 != 0).ToList();
+            lstString = ReportsHelper.GetText(lst.FirstPara.ToString(), 120).ToList();
+            foreach(string item in lstString)
+            {
+                lstLongMessage.Add(new LongMessage { Message = item });
+            }
 
             //DataTable table = ReportsHelper.ConvertoToDataTable(homes);
             var viewer = new ReportViewer();
@@ -75,6 +83,8 @@ namespace ReportDemo01.Controllers
             ReportDataSource rdRightObjectives = new ReportDataSource("ObjectivesRight", rtObjectives);
             ReportDataSource projectInvestment = new ReportDataSource("ProjectInvestment", lstProjectInvestments);
             ReportDataSource banks = new ReportDataSource("BankAccountInfo", lstBanks);
+            ReportDataSource rdMessage = new ReportDataSource("LongMessage", lstLongMessage);
+            
 
 
 
@@ -82,6 +92,8 @@ namespace ReportDemo01.Controllers
 
             ReportParameter lastPageFirstPara = new ReportParameter("LastPageFirstPara",lst.FirstPara.ToString());
             ReportParameter accNumber = new ReportParameter("AccountNumber",lstBanks[0].AccountNumber.ToString());
+            //ReportParameter ListOfStrings = new ReportParameter("ListOfString", lstString);
+
 
             viewer.LocalReport.DataSources.Clear();
 
@@ -93,6 +105,8 @@ namespace ReportDemo01.Controllers
             viewer.LocalReport.DataSources.Add(rdRightObjectives);
             viewer.LocalReport.DataSources.Add(projectInvestment);
             viewer.LocalReport.DataSources.Add(banks);
+            viewer.LocalReport.DataSources.Add(rdMessage);
+            //viewer.LocalReport.DataSources.Add(lstStrings);
             viewer.LocalReport.SetParameters(new ReportParameter[] { lastPageFirstPara, accNumber});
             //viewer.LocalReport.DataSources.Add(objectives);
 
@@ -102,6 +116,30 @@ namespace ReportDemo01.Controllers
             
             var bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
             return new FileContentResult(bytes, mimeType);
+        }
+
+        public ActionResult ExportCustomers()
+        {
+            List<LastPagePara> allPara = new List<LastPagePara>();
+            using(ShangrilaReportsEntities context = new ShangrilaReportsEntities())
+            {
+                allPara = context.LastPageParas.ToList();
+            }
+
+
+            ReportDocument rd = new ReportDocument();
+            rd.Load(Path.Combine(Server.MapPath("~/Reports"), "CrystalPersonalInfo.rpt"));
+
+            rd.SetDataSource(allPara);
+
+            Response.Buffer = false;
+            Response.ClearContent();
+            Response.ClearHeaders();
+
+
+            Stream stream = rd.ExportToStream(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat);
+            stream.Seek(0, SeekOrigin.Begin);
+            return File(stream, "application/pdf", "CustomerList.pdf");
         }
     }
 }

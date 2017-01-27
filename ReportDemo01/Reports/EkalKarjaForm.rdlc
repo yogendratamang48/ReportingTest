@@ -4590,7 +4590,7 @@
             <Top>5.12487in</Top>
             <Left>0.06246in</Left>
             <Height>2.75in</Height>
-            <Width>7.06478in</Width>
+            <Width>7.06477in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -5832,7 +5832,7 @@
             <Top>0.48141in</Top>
             <Left>0.0862in</Left>
             <Height>2.8125in</Height>
-            <Width>7.02671in</Width>
+            <Width>7.0267in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -7385,7 +7385,7 @@
             <Top>6.2984in</Top>
             <Left>0.05231in</Left>
             <Height>0.5in</Height>
-            <Width>7.0606in</Width>
+            <Width>7.06059in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -7411,43 +7411,6 @@
       </Rectangle>
       <Rectangle Name="Rectangle6">
         <ReportItems>
-          <Textbox Name="txtLastFirstPara">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>म/हामीलाई, नेपाल राष्ट्र बैंकद्वारा बैंक/वित्तीय संस्थाहरुलाई जारी गरिएको कर्जा सूचना तथा कालो सूची व्यवस्था सम्बन्धमा पूर्ण जानकारी छ । हालको सो व्यवस्था र त्यसमा हुने संशोधन अनुसार म/हामीलाई कारवाही गर्नुपर्ने अवस्था आउनेछैन । बैंक/वित्तीय संस्थाको नियम तथा शर्तहरुको पालना नगरेमा र लिएको कर्जा तोकिएको कार्यमा खर्च नगरेमा वा तिर्नुपर्ने साँवा, ब्याज, हर्जना, बीमा प्रिमियम र अन्य शुल्क समयमा नतिरे नबुझाएमा वा बेइमानी गरेमा बैंक/वित्तीय संस्थाको नियम तथा प्रचलित कानुन बमोजिम मेरो/हाम्रो चल अचल जायजेथाबाट समेत असुल उपर गरी लिएमा म/हामीलाई मञ्जुर छ पछि कुनै कुराको उजुर बाजुर गर्ने छैन । यस सम्बन्धमा बेकले सूचना दिई वा नदिई हाल भैरहेको नियम/शर्त/ब्याज दर/अन्य शुल्क तथा हर्जानामा गरिने संशोधन समेत म/हामीलाई मान्य हुनेछ ।</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Kokila</FontFamily>
-                      <FontSize>0.1875in</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>=IIf("check", "Left", "Right")</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.16667in</Top>
-            <Left>0.05231in</Left>
-            <Height>1.35764in</Height>
-            <Width>7.0606in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox641">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -7474,7 +7437,6 @@
             <Left>0.05948in</Left>
             <Height>0.69792in</Height>
             <Width>7.0606in</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7551,7 +7513,6 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox641</rd:DefaultName>
-                <Top>2.29166in</Top>
                 <Left>0.02974in</Left>
                 <Height>0.90625in</Height>
                 <Width>7.0606in</Width>
@@ -7567,11 +7528,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0in</Top>
-            <Left>0in</Left>
-            <Height>3.20833in</Height>
+            <Top>2.29166in</Top>
+            <Height>0.91667in</Height>
             <Width>7.12008in</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7584,7 +7544,7 @@
             <Left>1.03914in</Left>
             <Height>1in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -7616,7 +7576,7 @@
             <Left>0.07191in</Left>
             <Height>0.21875in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7651,7 +7611,7 @@
             <Left>1.03914in</Left>
             <Height>0.23264in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>5</ZIndex>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7668,7 +7628,7 @@
             <Left>0.06246in</Left>
             <Height>1in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -7682,7 +7642,7 @@
             <Left>6.16477in</Left>
             <Height>1in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -7714,7 +7674,7 @@
             <Left>5.19754in</Left>
             <Height>0.21875in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7749,7 +7709,7 @@
             <Left>6.16477in</Left>
             <Height>0.23264in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7766,7 +7726,7 @@
             <Left>5.1881in</Left>
             <Height>1in</Height>
             <Width>0.87625in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -7798,7 +7758,7 @@
             <Left>0.0862in</Left>
             <Height>0.25in</Height>
             <Width>1.82919in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7814,7 +7774,7 @@
             <Left>0.0862in</Left>
             <Height>0in</Height>
             <Width>1.84348in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -7845,7 +7805,7 @@
             <Left>5.1881in</Left>
             <Height>0.25in</Height>
             <Width>1.82919in</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -7861,7 +7821,7 @@
             <Left>5.1881in</Left>
             <Height>0in</Height>
             <Width>1.84348in</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -8076,12 +8036,85 @@
             <Left>0.07191in</Left>
             <Height>0.5in</Height>
             <Width>6.9311in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
               <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix6">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>7.03801in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Message">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Message.Value</Value>
+                                  <Style>
+                                    <FontFamily>Kokila</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Message</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <rd:Selected>true</rd:Selected>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details6" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>LongMessage</DataSetName>
+            <Top>0.48958in</Top>
+            <Left>0.05233in</Left>
+            <Height>0.25in</Height>
+            <Width>7.03801in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
             </Style>
           </Tablix>
         </ReportItems>
@@ -9046,6 +9079,26 @@
         <rd:DataSetName>Dhito</rd:DataSetName>
         <rd:SchemaPath>C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo01\RPTDatasets\Dhito.xsd</rd:SchemaPath>
         <rd:TableName>BankAccountInfo</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="LongMessage">
+      <Query>
+        <DataSourceName>Dhito</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Message">
+          <DataField>Message</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Dhito</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\NextByte\documents\visual studio 2015\Projects\ReportDemo01\ReportDemo01\RPTDatasets\Dhito.xsd</rd:SchemaPath>
+        <rd:TableName>LongMessage</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

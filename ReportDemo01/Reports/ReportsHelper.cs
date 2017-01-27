@@ -86,6 +86,11 @@ namespace ReportDemo01.Reports
             return resultado2;
         }
     }
-    
 
+    public  class LongMessage
+    {
+        
+        public string Message { get; set; }
+        
+    }
 }
